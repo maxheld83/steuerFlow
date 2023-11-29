@@ -8,6 +8,59 @@ Ein paar Mermaid-Flussdiagramme für Steuerzahler.
 
 Verbesserungen (Pull Requests, Issues) sind herzlich Willkommen!
 
+## Steuerliche Absetzbarkeit nach Gütern -- GWG & Co.
+
+```mermaid
+graph TB
+  welcheGA{"Güterart"}
+  VG("Verbrauchsgut")
+  AG("Anlagegut")
+  welcheGA -- zu gebrauchen --> AG
+  welcheGA -- zu verbrauchen --> VG
+  VG -- eingelagert --> VorR
+  Exp(("Unmittelbar abziehbare Kosten"))
+  VorR -- verbraucht --> Exp
+  VG -- verbraucht --> Exp
+  AG --> Selbst
+  Selbst{"Selbständig Nutzbar?"}
+  Selbst -- Nein --> Zugang
+  Zugang["Nachträgliche AHK \n zu bestehendem Wirtschaftsgut"]
+  Selbst -- Ja --> Bewegl
+  Bewegl{"Beweglich?"}
+  Bewegl -- Ja --> Abnutz
+  Bewegl -- Nein --> Immo & GS
+  Abnutz -- Ja --> AHK
+  Zugang -- Zugang --> AHK & Imma & Immo & GS
+  subgraph Aktivierung
+    VorR("Vorräte \n (Umlaufvermögen)")
+    Immo["Immobilie"]
+    GS["Grundstück"]
+    Imma["Immateriell"]
+    BeweglG["Bewegliche"]
+  end
+  Abnutz -- Nein --> Imma
+  Abnutz{"Abnutzbar?"}
+  Imma --> AfA
+  kAb(("Keine Absetzbarkeit"))
+  GS --> kAb
+  AHK{"Netto Anschaffungs- und \n Herstellungskosten (AHK)"}
+  AHK -- bis 250€ --> Exp
+  GWG("Geringwertiges Wirtschaftsgut")
+  AHK -- bis 1000€ --> GWG
+  GWG -- bis 1000€ --> Sammelposten
+  Sammelposten[("Sammelposten \n (Gilt bei Verwendung für GWG pro Jahr!)")]
+  Pool(("Poolabschreibung 5 Jahre linear"))
+  Sammelposten --> Pool
+  GWG-V[("GWG-Verzeichnis \n (Zeit und Höhe der Anschaffungen)")]
+  GWG -- bis 800€ --> GWG-V
+  AfA(("Absetzung für Abnutzung \n (Nach überlicher Nutzungsdauer)"))
+  GWG --> AfA
+  Immo --> AfA
+  GWG-V --> Exp
+  AHK -- andere --> BeweglG
+  BeweglG --> AfA
+```
+
 ## Sonderabschreibungen
 
 ### Sonderabschreibung für Mietwohnungsneubau § 7b EStG
