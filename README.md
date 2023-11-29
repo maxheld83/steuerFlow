@@ -13,7 +13,7 @@ Verbesserungen (Pull Requests, Issues) sind herzlich Willkommen!
 ### Investitionsabzugsbetrag und Sonderabschreibung nach § 7g EStG
 
 ```mermaid
-flowchart LR;
+graph LR;
   subgraph Bedingungen;
     direction TB;
     istKMU{"Gewinn < 200.000€ \n (Wirtschaftsjahr des Abzugs)"};
