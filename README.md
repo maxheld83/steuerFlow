@@ -12,50 +12,6 @@ Verbesserungen (Pull Requests, Issues) sind herzlich Willkommen!
 
 ### Investitionsabzugsbetrag und Sonderabschreibung nach § 7g EStG
 
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-
-```mermaid
-flowchart LR
-    istKMU{"Gewinn < 200.000€ \n (Wirtschaftsjahr des Abzugs)"};
-    istKMU -- Ja --> istAktiv;
-    id["This 🚫 Unicode"]
-```
-
-```mermaid
-flowchart LR
-    id1([This is the text in the box])
-```
-
-```mermaid
-flowchart LR
-    id1([This is a \n linebreak])
-```
-
-```mermaid
-flowchart LR
-    A-- This is the text! ---B
-```
-
-
-```mermaid
-flowchart TB
-    c1-->a2
-    subgraph one
-    a1-->a2
-    end
-    subgraph two
-    b1-->b2
-    end
-    subgraph three
-    c1-->c2
-    end
-```
 
 ```mermaid
 graph LR;
