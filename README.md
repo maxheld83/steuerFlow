@@ -44,15 +44,15 @@ graph TB
   kAb(("Keine Absetzbarkeit"))
   GS --> kAb
   AHK{"Netto Anschaffungs- und \n Herstellungskosten (AHK)"}
-  AHK -- bis 250€ --> Exp
+  AHK -- "bis 250€" --> Exp
   GWG("Geringwertiges Wirtschaftsgut")
-  AHK -- bis 1000€ --> GWG
-  GWG -- bis 1000€ --> Sammelposten
+  AHK -- "bis 1000€" --> GWG
+  GWG -- "bis 1000€" --> Sammelposten
   Sammelposten[("Sammelposten \n (Gilt bei Verwendung für GWG pro Jahr!)")]
   Pool(("Poolabschreibung 5 Jahre linear"))
   Sammelposten --> Pool
   GWG-V[("GWG-Verzeichnis \n (Zeit und Höhe der Anschaffungen)")]
-  GWG -- bis 800€ --> GWG-V
+  GWG -- "bis 800€" --> GWG-V
   AfA(("Absetzung für Abnutzung \n (Nach überlicher Nutzungsdauer)"))
   GWG --> AfA
   Immo --> AfA
