@@ -73,7 +73,7 @@ graph LR;
     ist90{"Betriebliche \n Nutzung > 90%? \n (In inländischer Betriebsstätte)"};
     ist90 -- Nein --> keineSA;
   end;
-  subgraph EStG7g ["§ 7g EStG"];
+  subgraph EStG7g;
     direction TB;
     ist90 -- Ja --> statusInv;
     statusInv{"Status \n der Investition?"};
