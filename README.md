@@ -78,6 +78,10 @@ graph LR;
     ist90 -- Ja --> statusInv;
     statusInv{"Status \n der Investition?"};
     statusInv -- erfolgt --> 7gSonder;
+    7gSonder["✅ Sonderabschreibung \n <20% innerhalb von bis zu 4 Jahren \n (zusätzlich zu AfA)"];
+    statusInv -- geplant --> 7gInvAbzug;
+    7gInvAbzug["✅ Investitionsabzugsbetrag \n 50% der erwarteten AHK "];
+    7gInvAbzug -- erfolgt (🗓️ 3 Jahre) --> 7gInvAbzugErfolg;
   end;
 ```
 
