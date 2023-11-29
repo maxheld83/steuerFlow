@@ -4,11 +4,58 @@ Ein paar Mermaid-Flussdiagramme für Steuerzahler.
 
 > [!NOTE]
 > Keine Steuer- oder Rechtsberatung.
-> Kein Gewähr.
+> Keine Haftung für den Inhalt.
 
 Verbesserungen (Pull Requests, Issues) sind herzlich Willkommen!
 
 ## Sonderabschreibungen
+
+### Sonderabschreibung für Mietwohnungsneubau § 7b EStG
+
+```mermaid
+graph LR;
+  subgraph Bedingungen
+    direction TB
+    istNeuWR{"Neue Wohnung entstanden? \n Neu-, Aus- & Anbau \n (§ 181 Abs. 9 BewG, >=23m2)"}
+    istNeuWR -- Nein --> keineSA["🚫 Nicht begünstigt"]
+    istNeuWR -- Ja --> istInFrist
+    istInFrist{"\n Bauanzeige, Bauantrantrag \n oder Beginn Ausführung wenn genehmigungsfrei \n von 31.12.2018 bis 01.01.2022 \n von 01.01.2023 bis 31.12.2026"}
+    istInFrist -- Nein --> keineSA
+    istInFrist -- Ja --> istKFW40
+    istKFW40{"Gebäude ist <= Effizienzhaus 40 \n Qualitätssiegel Nachhaltiges Gebaeude \n (Bedingung nur ab 2023)"}
+    istKFW40 -- Nein --> keineSA
+    istKFW40 -- Ja --> AHK3k
+  end
+  subgraph EStG7b ["§ 7b EStG"];
+    direction TB
+    AHK3k{"< 4800€/m2 \n < 3000€/m2 (alte Regelung bis 31.12.2021)"}
+    AHK3k -- Nein --> keineSA
+    AHK3k -- Ja --> Fertig
+    Fertig(("Fertigstellung"))
+    Fertig --> 7bSonder
+    7bSonder["✅ Sonderabschreibung \n bis zu 4x5% p.a."]
+    7bSonder --> 10JVerm
+    10JVerm(("10 Jahre \n Vermietung"))
+    10JVerm -- Nein --> RueckZ
+    RueckZ["Ggfs. Steuernachforderung"]
+  end
+  AHK("Anschaffungs- und Herstellungskosten \n (AHK)")
+  AHK --> istAHKNeueWohn
+  istAHKNeueWohn{"Anteil für neue Wohnungen"}
+  istAHKNeueWohn -- Alle --> AHK3k
+  istAHKNeueWohn -- Alle --> AfA
+  istAHKNeueWohn -- Anteil --> AHK2k
+  AHK2k[/"max 2500€/m2 \n von max 2000€/m2 (alte Regelung bis 31.12.2018)"\]
+  AHK2k --> 7bSonder
+```
+
+Gerechnet wird jeweils €/m2 Wohnfläche (nach Wohnflächenverordnung zzgl. Nebenräume).
+
+Quellen:
+
+- [Gesetzestext](https://www.gesetze-im-internet.de/estg/__7b.html)
+- [BMF Anwendungsschreiben zur Sonderabschreibung](https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Steuerarten/Einkommensteuer/2020-07-07-anwendungsschreiben-zur-sonderabschreibung-fuer-die-anschaffung-oder-herstellung-neuer-mietwohnungen-nach-paragraf-7b.pdf?__blob=publicationFile&v=1)
+
 
 ### Investitionsabzugsbetrag und Sonderabschreibung nach § 7g EStG
 
