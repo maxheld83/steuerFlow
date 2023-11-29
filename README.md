@@ -81,7 +81,10 @@ graph LR;
     7gSonder["✅ Sonderabschreibung \n <20% innerhalb von bis zu 4 Jahren \n (zusätzlich zu AfA)"];
     statusInv -- geplant --> 7gInvAbzug;
     7gInvAbzug["✅ Investitionsabzugsbetrag \n 50% der erwarteten AHK "];
-    7gInvAbzug -- erfolgt (🗓️ 3 Jahre) --> 7gInvAbzugErfolg;
+    7gInvAbzug -- "erfolgt (🗓️ 3 Jahre)" --> 7gInvAbzugErfolg;
+    7gInvAbzugErfolg["🔄 Hinzurechnung ➕50% AHK zum Gewinn, \n Sonderabschreibung ➖50% AHK"];
+    7gInvAbzugRueckz["Ggfs. Steuernachforderung zzgl. 1.8% p.a."];
+    7gInvAbzug -- nicht erfolgt --> 7gInvAbzugRueckz;
   end;
 ```
 
