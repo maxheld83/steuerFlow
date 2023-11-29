@@ -23,6 +23,7 @@ graph TD;
 ```mermaid
 flowchart LR
     istKMU{"Gewinn < 200.000€ \n (Wirtschaftsjahr des Abzugs)"};
+    istKMU -- Ja --> istAktiv;
     id["This 🚫 Unicode"]
 ```
 
