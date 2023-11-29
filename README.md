@@ -13,6 +13,14 @@ Verbesserungen (Pull Requests, Issues) sind herzlich Willkommen!
 ### Investitionsabzugsbetrag und Sonderabschreibung nach § 7g EStG
 
 ```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+```mermaid
 graph LR;
   subgraph Bedingungen;
     direction TB;
