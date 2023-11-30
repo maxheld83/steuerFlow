@@ -18,7 +18,7 @@ graph TB
   welcheGA -- zu gebrauchen --> AG
   welcheGA -- zu verbrauchen --> VG
   VG -- eingelagert --> VorR
-  Exp(("Unmittelbar \n abziehbare Kosten"))
+  Exp(("Sofortabschreibung"))
   VorR -- verbraucht --> Exp
   VG -- verbraucht --> Exp
   AG --> Selbst
@@ -60,6 +60,10 @@ graph TB
   AHK -- andere --> BeweglG
   BeweglG --> AfA
 ```
+
+Quellen:
+
+- [BMF Anwendungsschreiben zur Nutzungsdauer von Computerhardware](https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Steuerarten/Einkommensteuer/2022-02-22-nutzungsdauer-von-computerhardware-und-software-zur-dateneingabe-und-verarbeitung.pdf?__blob=publicationFile&v=3)
 
 ## Sonderabschreibungen
 
