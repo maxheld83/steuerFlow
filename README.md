@@ -8,6 +8,30 @@ Ein paar Mermaid-Flussdiagramme für Steuerzahler.
 
 Verbesserungen (Pull Requests, Issues) sind herzlich Willkommen!
 
+## Anforderungen an Rechnungen
+
+```mermaid
+graph LR
+  RechnSB{"Rechnungssumme Brutto"}
+  RechnSB -- "< 250€" --> Kleinbetragsrechnung
+  subgraph Rechnungsangaben
+    subgraph Kleinbetragsrechnung
+      NAn("✔️ Name und Anschrift \n des leistenden Unternehmers")
+      AustD("✔️ Austellungsdatum")
+      MengeBz("✔️ Menge und Bezeichnung \n des Gegenstands")
+      ProzUst("✔️ Prozentsatz der angewandten USt")
+    end
+    SteurNr("✔️ Steuernummer oder USt-ID")
+    RechNr("✔️ Fortlaufende Rechnungsnummer")
+    LieferDat("✔️ Liefer- \n und Leistungszeitraum")
+    Netto("✔️ Netto- \n und Steuerbetrag")
+  end
+```
+
+Quelle:
+
+- [Gesetzestext](https://www.gesetze-im-internet.de/ustg_1980/__14.html)
+
 ## Steuerliche Absetzbarkeit nach Gütern -- GWG & Co.
 
 ```mermaid
