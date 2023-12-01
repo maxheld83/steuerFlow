@@ -22,7 +22,7 @@ jobs:
       - name: Copy index.html
         run: |
           mkdir _site
-          mv index.html _site/index.html
+          mv index.html index_files _site/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
   deploy:
