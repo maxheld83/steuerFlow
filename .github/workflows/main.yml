@@ -19,11 +19,14 @@ jobs:
       - name: Render Quarto
         run: |
           quarto render index.qmd
+      - name: Copy index.html
+        run: |
+          cp index.html docs/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           name: quarto-site
-          path: index.html
+          path: docs/
 
   deploy:
     runs-on: ubuntu-latest
