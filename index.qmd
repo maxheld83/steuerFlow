@@ -15,16 +15,13 @@ format:
 ---
 
 {{< include README.md >}}
-2
 
 ## Anforderungen an Rechnungen
 
 ```{mermaid}
-%%| column: page
 %%| file: diagrams/anfo_rechn.mmd
+%%| column: page
 ```
-
-1
 
 Quelle:
 
@@ -35,7 +32,7 @@ Quelle:
 
 ```{mermaid}
 %%| file: diagrams/gwgco.mmd
-%%| column: page
+%%| column: screen
 ```
 
 Quellen:
@@ -49,7 +46,7 @@ Quellen:
 
 ```{mermaid}
 %%| file: diagrams/estg7b.mmd
-%%| column: page
+%%| column: screen
 ```
 
 Gerechnet wird jeweils €/m2 Wohnfläche (nach Wohnflächenverordnung zzgl. Nebenräume).
