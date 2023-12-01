@@ -10,12 +10,14 @@ Verbesserungen (Pull Requests, Issues) sind herzlich Willkommen!
 
 ## Anforderungen an Rechnungen
 
-```mermaid
-graph LR
+```{mermaid}
+flowchart LR
   RechnSB{"Rechnungssumme Brutto"}
   RechnSB -- "< 250€" --> Kleinbetragsrechnung
   subgraph Rechnungsangaben
+    direction TB
     subgraph Kleinbetragsrechnung
+      direction TB
       NAn("✔️ Name und Anschrift \n des leistenden Unternehmers")
       AustD("✔️ Austellungsdatum")
       MengeBz("✔️ Menge und Bezeichnung \n des Gegenstands")
