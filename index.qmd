@@ -32,7 +32,7 @@ Quelle:
 
 ```{mermaid}
 %%| file: diagrams/gwgco.mmd
-%%| column: screen
+%%| column: page
 ```
 
 Quellen:
@@ -46,7 +46,7 @@ Quellen:
 
 ```{mermaid}
 %%| file: diagrams/estg7b.mmd
-%%| column: screen
+%%| column: page
 ```
 
 Gerechnet wird jeweils €/m2 Wohnfläche (nach Wohnflächenverordnung zzgl. Nebenräume).
@@ -61,7 +61,7 @@ Quellen:
 
 ```{mermaid}
 %%| file: diagrams/estg7g.mmd
-%%| column: screen
+%%| column: page
 ```
 
 Quellen:
