@@ -1,0 +1,74 @@
+---
+title: "steuerFlow"
+author: "Max Held"
+lang: "de"
+format:
+  html:
+    theme: pulse
+    anchor-sections: true
+    mermaid:
+      theme: default
+    code-tools:
+      source: https://github.com/maxheld83/steuerFlow/blob/main/index.qmd
+    toc: true
+    number-sections: false
+---
+
+{{< include README.md >}}
+2
+
+## Anforderungen an Rechnungen
+
+```{mermaid}
+%%| column: page
+%%| file: diagrams/anfo_rechn.mmd
+```
+
+1
+
+Quelle:
+
+- [Gesetzestext](https://www.gesetze-im-internet.de/ustg_1980/__14.html)
+
+
+## Steuerliche Absetzbarkeit nach Gütern -- GWG & Co.
+
+```{mermaid}
+%%| file: diagrams/gwgco.mmd
+%%| column: page
+```
+
+Quellen:
+
+- [BMF Anwendungsschreiben zur Nutzungsdauer von Computerhardware](https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Steuerarten/Einkommensteuer/2022-02-22-nutzungsdauer-von-computerhardware-und-software-zur-dateneingabe-und-verarbeitung.pdf?__blob=publicationFile&v=3)
+
+
+## Sonderabschreibungen
+
+### Sonderabschreibung für Mietwohnungsneubau § 7b EStG
+
+```{mermaid}
+%%| file: diagrams/estg7b.mmd
+%%| column: page
+```
+
+Gerechnet wird jeweils €/m2 Wohnfläche (nach Wohnflächenverordnung zzgl. Nebenräume).
+
+Quellen:
+
+- [Gesetzestext](https://www.gesetze-im-internet.de/estg/__7b.html)
+- [BMF Anwendungsschreiben zur Sonderabschreibung](https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Steuerarten/Einkommensteuer/2020-07-07-anwendungsschreiben-zur-sonderabschreibung-fuer-die-anschaffung-oder-herstellung-neuer-mietwohnungen-nach-paragraf-7b.pdf?__blob=publicationFile&v=1)
+
+
+### Investitionsabzugsbetrag und Sonderabschreibung nach § 7g EStG
+
+```{mermaid}
+%%| file: diagrams/estg7g.mmd
+%%| column: screen
+```
+
+Quellen:
+
+- [Gesetzestext](https://www.gesetze-im-internet.de/estg/__7g.html)
+- [BMF Anwendungsschreiben zu Investitionsabzugsbeträgen](https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Steuerarten/Einkommensteuer/2022-06-15-Zweifelsfragen-Investitionsabzugsbetraege.pdf?__blob=publicationFile&v=2)
+- [IHK Stuttgart](https://www.ihk.de/stuttgart/fuer-unternehmen/recht-und-steuern/steuerrecht/einkommen-und-koerperschaftssteuer/ansparabschreibung-676416)
